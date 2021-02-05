@@ -173,29 +173,29 @@ module.exports = {
         node.timing[((node.days-1)*24)+node.selector-5]++;
         if (node.timing[((node.days-1)*24)+node.selector-5]>29)
         node.timing[((node.days-1)*24)+node.selector-5]=29;
-        msg.foryou="Temperatura incremantada";
+        msg.foryou="Temperatura aumentata";
       }
       if (node.selector==1) {
         if (node.timing[168+(node.selector-1)]<29) {
           node.timing[168+(node.selector-1)]++;
-          msg.foryou="+1º la temperatura contra heladas";
+          msg.foryou="+1º temperatura contro il gelo";
         } else {
-          msg.foryou="Has llegado al límite"
+          msg.foryou="Hai raggiunto il limite"
         };
       }
       if (node.selector==2) {
         if (node.timing[168+(node.selector-1)]<29) {
           node.timing[168+(node.selector-1)]++;
-          msg.foryou="+1º la temperatura de apagado de la caldera";
+          msg.foryou="+1º la temperatura di spegnimento della caldaia";
         } else {
-          msg.foryou="Has llegado al límite";
+          msg.foryou="Hai raggiunto il limite";
         }
       }
       if (node.selector==29) {
         if (node.days<7) {
-          node.days++; msg.foryou="Un día adelante";
+          node.days++; msg.foryou="Un giorno avanti";
         } else {
-          msg.foryou="Último día de la semana";
+          msg.foryou="L'ultimo giorno della settimana";
         }
       }
       break;
@@ -205,30 +205,30 @@ module.exports = {
         if (node.timing[((node.days-1)*24)+node.selector-5]<14) {
           node.timing[((node.days-1)*24)+node.selector-5]=0;
         }
-        msg.foryou="Temperatura decrementada";
+        msg.foryou="Diminuzione della temperatura";
       }
       if (node.selector==1) {
         if (node.timing[168+(node.selector-1)]>12) {
           node.timing[168+(node.selector-1)]--;
-          msg.foryou="-1º la temperatura contra heladas";
+          msg.foryou="-1º temperatura contro il gelo";
         } else {
-          msg.foryou="Has llegado al límite";
+          msg.foryou="Hai raggiunto il limite";
         }
       }
       if (node.selector==2) {
         if (node.timing[168+(node.selector-1)]>12) {
           node.timing[168+(node.selector-1)]--;
-          msg.foryou="-1º la temperatura de apagado de la caldera";
+          msg.foryou="-1º la temperatura di spegnimento della caldaia";
         } else {
-          msg.foryou="Has llegado al límite";
+          msg.foryou="Hai raggiunto il limite";
         }
       }
       if (node.selector==29) {
         if (node.days>1) {
           node.days--;
-          msg.foryou="Un día atrás";
+          msg.foryou="Un giorno indietro";
         } else {
-          msg.foryou="Primer día de la semana"
+          msg.foryou="Il primo giorno della settimana"
         };
       }
       break;
@@ -258,9 +258,9 @@ module.exports = {
       case '29':
         node.selector=parseInt(msg.payload);
         if (msg.payload=='1')
-          msg.foryou="Seleccionada la temperatura contra heladas";
+          msg.foryou="Selezionata la temperatura contro il gelo";
         else if (msg.payload=='2')
-          msg.foryou="Temperatura de apagado de la caldera";
+          msg.foryou="Temperatura di spegnimento della caldaia";
         else if (msg.payload=='29')
           msg.foryou=RED._("week_schedule.DAYOFWEEK");
         else
@@ -293,29 +293,29 @@ module.exports = {
             node.timing[((node.days-1)*24)+node.selector-5]++;
             if (node.timing[((node.days-1)*24)+node.selector-5]>29)
             node.timing[((node.days-1)*24)+node.selector-5]=29;
-            msg.foryou="Temperatura incremantada";
+            msg.foryou="Aumento della temperatura";
           }
           if (node.selector==1) {
             if (node.timing[168+(node.selector-1)]<29) {
               node.timing[168+(node.selector-1)]++;
-              msg.foryou="+1º la temperatura contra heladas";
+              msg.foryou="+1º temperatura contro il gelo";
             } else {
-              msg.foryou="Has llegado al límite"
+              msg.foryou="Hai raggiunto il limite"
             };
           }
           if (node.selector==2) {
             if (node.timing[168+(node.selector-1)]<29) {
               node.timing[168+(node.selector-1)]++;
-              msg.foryou="+1º la temperatura de apagado de la caldera";
+              msg.foryou="+1º la temperatura di spegnimento della caldaia";
             } else {
-              msg.foryou="Has llegado al límite";
+              msg.foryou="Hai raggiunto il limite";
             }
           }
           if (node.selector==29) {
             if (node.days<7) {
-              node.days++; msg.foryou="Un día adelante";
+              node.days++; msg.foryou="Un giorno avanti";
             } else {
-              msg.foryou="Último día de la semana";
+              msg.foryou="L'ultimo giorno della settimana";
             }
           }
         break;
@@ -325,30 +325,30 @@ module.exports = {
             if (node.timing[((node.days-1)*24)+node.selector-5]<14) {
               node.timing[((node.days-1)*24)+node.selector-5]=0;
             }
-            msg.foryou="Temperatura decrementada";
+            msg.foryou="Diminuzione della temperatura";
           }
           if (node.selector==1) {
             if (node.timing[168+(node.selector-1)]>12) {
               node.timing[168+(node.selector-1)]--;
-              msg.foryou="-1º la temperatura contra heladas";
+              msg.foryou="-1º temperatura contro il gelo";
             } else {
-              msg.foryou="Has llegado al límite";
+              msg.foryou="Hai raggiunto il limite";
             }
           }
           if (node.selector==2) {
             if (node.timing[168+(node.selector-1)]>12) {
               node.timing[168+(node.selector-1)]--;
-              msg.foryou="-1º la temperatura de apagado de la caldera";
+              msg.foryou="-1º la temperatura di spegnimento della caldaia";
             } else {
-              msg.foryou="Has llegado al límite";
+              msg.foryou="Hai raggiunto il limite";
             }
           }
           if (node.selector==29) {
             if (node.days>1) {
               node.days--;
-              msg.foryou="Un día atrás";
+              msg.foryou="Un giorno indietro";
             } else {
-              msg.foryou="Primer día de la semana";
+              msg.foryou="Primo giorno della settimana";
             }
           }
         break;
@@ -378,9 +378,9 @@ module.exports = {
         case '29':
           node.selector=parseInt(msg.payload);
           if (msg.payload=='1')
-            msg.foryou="Seleccionada la temperatura contra heladas";
+            msg.foryou="Seleziona la temperatura contro il gelo";
           else if (msg.payload=='2')
-            msg.foryou="Temperatura de apagado de la caldera";
+            msg.foryou="Temperatura di spegnimento della caldaia";
           else if (msg.payload=='29')
             msg.foryou=RED._("week_schedule.DAYOFWEEK");
           else
@@ -409,7 +409,7 @@ module.exports = {
     * THIS IS CLIENT (browser) SIDE
     ******************************/
     // var thedays = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"];
-    var thedays = ["LUNES", "MARTES", "MIÉRCOLES", "JUEVES", "VIERNES", "SÁBADO", "DOMINGO"];
+    var thedays = ["LUNEDI", "MARTEDI", "MERCOLEDI", "GIOVEDI", "VENERDI", "SABATO", "DOMENICA"];
     var last = 1;
 
     var bar = (mm,val) => {
